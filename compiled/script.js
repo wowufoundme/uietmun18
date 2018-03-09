@@ -7,3 +7,6 @@ $(document).ready(function(){
     $('#popup').addClass('popup-closed');
   });
 });
+$(window).on('load', function () {
+  alert("Window Loaded");
+});
