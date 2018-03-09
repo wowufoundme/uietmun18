@@ -27,9 +27,6 @@ body
   overflow-y scroll
   
 .wrapper 
-  // background #4b6cb7
-  // background -webkit-linear-gradient(to top, #182848, #4b6cb7)
-  // background linear-gradient(to top, #182848, #4b6cb7)
   position: relative
   width: 100%
 
@@ -51,7 +48,7 @@ body
   font-weight 300
   text-align: center
   @media (max-width: 720px)
-    font-size: 20px;
+    font-size: 16px;
   span 
     font-weight 700
   
@@ -71,8 +68,8 @@ body
   background-size: cover
   background-position: center
   background-repeat: no-repeat
+  background-attachment fixed
   overflow: hidden
-  transform: translate3d(0,0,0)
   border-top 1px solid #eee
   transition(all 1s cubic-bezier(cubic-value))
   @media (max-width: 720px)
@@ -228,7 +225,12 @@ body
   bottom 0
   left 0
   right 0
-  background #3d3d3d
+  background deep-blue
+  @media (max-width 720px)
+    background linear-gradient(to top,rgba(0,0,0,.8),rgba(0,0,0,.8)), url('../assets/img/logo-full.png')
+    background-size 100%
+    background-position center
+    background-repeat no-repeat
   // background #4b6cb7
   // background -webkit-linear-gradient(to bottom, #182848, #4b6cb7)
   // background linear-gradient(to bottom, #182848, #4b6cb7)
@@ -246,7 +248,7 @@ body
 
 .is-active
   transform translateY(0)
-
+  
 .current
   text-decoration: line-through
 
@@ -456,7 +458,7 @@ mark
   
 .card-dark
   background-color #222f3e
-  color #ddd
+  color #ececec
   
 .card-inverted
   text-align right
