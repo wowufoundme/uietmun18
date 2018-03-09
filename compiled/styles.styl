@@ -66,7 +66,7 @@ body
   z-index: 1
   center-flex(column)
   min-height 550px
-  height 700px
+  height 100vh
   background: linear-gradient(to bottom,rgba(0,0,0,.75),rgba(0,0,0,.35), rgba(0,0,0,0.75)),url(../assets/img/wall3.jpeg)
   background-size: cover
   background-position: center
@@ -76,7 +76,7 @@ body
   border-top 1px solid #eee
   transition(all 1s cubic-bezier(cubic-value))
   @media (max-width: 720px)
-    height: 150px
+    height 100vh
 
 .main:before,
 .main:after
@@ -211,9 +211,14 @@ hr
 
 .masthead
   width 100%
-  background-color #282e34
   margin: 0 auto
-  text-align: center
+  text-align center
+  center-flex(row)
+  padding 100px 0
+  .masthead__date
+    font-size 60px
+    @media (max-width 720px)
+      font-size 32px
 
 .masthead-content
   font-size: 24px
@@ -249,7 +254,7 @@ hr
   bottom 0
   left 0
   right 0
-  background #fff 
+  background #f4f4f4
   // background #4b6cb7
   // background -webkit-linear-gradient(to bottom, #182848, #4b6cb7)
   // background linear-gradient(to bottom, #182848, #4b6cb7)
@@ -333,12 +338,13 @@ hr
     position: relative
     margin: .6rem auto
     padding 5px
-    font-size: 16px
-    letter-spacing 1px
-    font-weight 300
-    color #fff
-    line-height: 24px
+    font-size: 32px
+    letter-spacing 0
+    font-weight 400
+    color #666
+    line-height: 40px
     overflow: hidden
+    transition(all .2s cubic-bezier(cubic-value))
     &:before
       content: ''
       position: absolute
@@ -348,12 +354,13 @@ hr
       left: 0
       bottom: 0
       right: 0
-      background-color: lighten(main-color,0%)
+      background-color #111
       transform: translateX(-105%)
       transition(all .2s cubic-bezier(cubic-value))
       @media (max-width: 720px)
         display: none;
     &:hover
+      color #ffff
       &:before
         transform: translateX(0)
 
@@ -392,24 +399,13 @@ hr
   font-size: 2rem
   margin-left: 1rem
 
-.services
+.committees
   center-flex(column)
-  .services-title-lg
-    font-size: 32px
-    text-transform: uppercase
-    margin-bottom: 50px
-  .row
-    center-flex(row)
-    div:nth-child(last)
-      margin-right: 50px
-
-.products
-  center-flex(column)
-  margin-top: 50px
-  .products-title-lg
-    font-size: 32px
-    text-transform: uppercase
-    margin-bottom: 50px
+  .committee_wall
+    background #ededed
+    padding 100px 0
+    img
+      max-width 100%
     @media (max-width: 720px)
       font-size: 24px
       margin-bottom: 20px
