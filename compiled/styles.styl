@@ -1,0 +1,423 @@
+@import _variables
+@import _functions
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900')
+
+*
+  padding: 0
+  margin: 0
+  text-rendering: auto
+  font-smoothing(antialiased)
+  box-sizing: border-box
+
+a
+  color: inherit
+  text-decoration: none
+
+html 
+  height: 100%
+
+body 
+  width: 100%
+  height: 100%
+  font: normal 14px/24px 'Roboto','Helvetica','Helvetica Neue','Arial',sans-serif 
+  background-color: #fff
+  color: main-color 
+  overflow-x: hidden
+  
+.wrapper 
+  // background #4b6cb7
+  // background -webkit-linear-gradient(to top, #182848, #4b6cb7)
+  // background linear-gradient(to top, #182848, #4b6cb7)
+  position: relative
+  width: 100%
+
+.title-container 
+  width: 100%
+  height: 4rem
+  center-flex(column)
+  position fixed
+  top 0
+  z-index 9998
+  background #fff
+  @media (max-width 720px)
+    height 2rem
+
+.title 
+  position: relative
+  font-size: 28px
+  font-weight 300
+  text-align: center
+  @media (max-width: 720px)
+    font-size: 14px;
+  span 
+    font-weight 700
+  
+.container
+  display: flex
+  position: relative
+  transform: translateX(0)
+  transition(all 1s cubic-bezier(cubic-value))
+
+.translate-small-container
+  transform: translateX(50px)
+
+.main 
+  z-index: 1
+  center-flex(column)
+  min-height 550px
+  height 700px
+  background: linear-gradient(to bottom,rgba(0,0,0,.75),rgba(0,0,0,.35), rgba(0,0,0,0.75)),url(../assets/img/wall3.jpeg)
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  background-attachment fixed
+  overflow: hidden
+  transform: translate3d(0,0,0)
+  border-top 1px solid #eee
+  transition(all 1s cubic-bezier(cubic-value))
+  @media (max-width: 720px)
+    height: 150px
+    margin: 1rem .05rem
+
+.main:before,
+.main:after
+  transition(all 1s cubic-bezier(cubic-value))
+  @media (max-width: 720px)
+    display: none;
+
+.main:before
+  content: ''
+  position: absolute
+  width: 100%
+  height: 100%
+  z-index: -2
+  background-color: #fff
+  right: 45%
+  transform: skew(-45deg)
+
+.main:after
+  content: ''
+  position: absolute
+  width: 100%
+  height: 100%
+  z-index: -2
+  background-color: #fff
+  left: 45%
+  transform: skew(-45deg)
+
+.main:hover:before
+  right: 100%
+
+.main:hover:after
+  left: 100%
+  
+.intro-container
+  color: lighten(main-color,55%)
+  width: 85%
+  max-width: 960px
+  margin: 0 auto
+  @media (max-width: 720px)
+    color: lighten(main-color,95%)
+
+.intro 
+  font-size: 2.6rem
+  line-height: 50px
+  font-weight: 300
+  cursor: default
+  transition(all 1s cubic-bezier(cubic-value))
+  @media (max-width: 720px)
+    font-size: 28px
+    line-height: 30px
+    letter-spacing: 0
+
+.main:hover .intro-container
+  color: lighten(main-color,105%)
+
+.link 
+  z-index: 1
+  margin-top: 40px
+  display: block
+  position: relative
+  border: 1px solid lighten(main-color,55%)
+  min-width 100px
+  width: 250px;
+  text-align: center
+  padding: 20px 40px
+  overflow: hidden
+  transition(all .6s cubic-bezier(cubic-value))  
+  @media (max-width: 720px)
+    padding: 5px 15px
+    width: 150px
+    background-color: #ffffff
+    color: main-color
+  &:hover 
+    color: main-color
+
+.link:before
+  content: ''
+  position: absolute
+  z-index: -1
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  background-color: #fff
+  transform: translateX(-100%)
+  transition(all .5s cubic-bezier(cubic-value))
+  @media (max-width: 720px)
+    display: none;
+
+.link:hover:before
+  transform: translateX(0%)
+
+.btn
+  font-size: 12px
+  letter-spacing: 4px
+  text-transform: uppercase
+  @media (max-width: 720px)
+    letter-spacing: 1px
+
+hr
+  width: 30%
+  margin: 5rem auto 2rem auto
+  height: 1px
+  background-color: lighten(main-color,55%)
+  outline: none
+  border: none
+  @media (max-width: 720px)
+    margin: 1rem auto
+
+.masthead
+  width 100%
+  background-color #282e34
+  margin: 0 auto
+  text-align: center
+
+.masthead-content
+  font-size: 24px
+  line-height: 28px
+  letter-spacing: -.05rem
+  @media (max-width: 720px)
+    font-size: 16px
+    letter-spacing: -.01rem
+    line-height: 20px
+  span 
+    font-weight: bold
+  .director-name
+    margin-top: 2px
+    font-size: .9rem
+    letter-spacing: 1px
+    font-style: italic
+    text-transform: uppercase
+  .director-designation
+    font-size: .8rem
+    margin-top: -10px
+    font-style: italic
+    @media (max-width: 720px)
+      margin-top: 0
+  .light
+    color: lighten(main-color,30%)
+
+.nav-container 
+  height: 95%
+
+.nav 
+  position fixed
+  top 10px
+  bottom 10px
+  left 10px
+  right 10px
+  background #4b6cb7
+  background -webkit-linear-gradient(to bottom, #182848, #4b6cb7)
+  background linear-gradient(to bottom, #182848, #4b6cb7)
+  z-index: 9997
+  margin: 5px
+  center-flex(row)
+  border: thin solid lighten(main-color, 60%)
+  transform: translateX(-120%)
+  transition(all 1s cubic-bezier(cubic-value)) 
+  @media (max-width: 720px)
+    top: 8px
+    bottom: 8px
+    left: 8px
+    right: 8px
+    margin: 0
+
+.is-active
+  transform: matrix(1,0,0,1,0,0)
+
+.current
+  text-decoration: line-through
+
+.nav-toggle-container 
+  position: fixed
+  z-index 9998
+  top: 10px 
+  left: 30px
+  cursor pointer
+  @media (max-width: 720px)
+    top -5px
+  .toggle
+    position relative
+    transform translate(-50%,50%)
+    width 40px
+    height 40px
+    background transparent
+    span
+      position absolute
+      width 20px
+      height 2px
+      background #222
+      transform translate(150%,0)
+      transition .25s
+      transition-delay 0
+      &:before
+        content ''
+        position absolute
+        width 20px
+        height 2px
+        top -6px
+        background #222
+        transform translate(0,0)
+        transition-property top, transform
+        transition-delay 0, .5s
+        transition-duration .5s, .5s
+      &:after
+        content ''
+        position absolute
+        width 20px
+        height 2px
+        top 6px
+        background #222
+        transform translate(0,0)
+        transition-property top, transform
+        transition-delay 0, .5s
+        transition-duration .5s, .5s
+  .active
+    span
+      background transparent
+      &:before
+        top 0px
+        transform rotate(45deg)  
+        transition-delay 0s, .5s
+      &:after
+        top 0px
+        transform rotate(-45deg)  
+        transition-delay 0s, .5s
+
+.navigation
+  display: block
+  .nav-item
+    position: relative
+    margin: .6rem auto
+    padding 5px
+    font-size: 20px
+    color #fff
+    line-height: 24px
+    overflow: hidden
+    &:before
+      content: ''
+      position: absolute
+      z-index: -1
+      width: 100%
+      height: 100%
+      left: 0
+      bottom: 0
+      right: 0
+      background-color: lighten(main-color,0%)
+      transform: translateX(-105%)
+      transition(all .2s cubic-bezier(cubic-value))
+      @media (max-width: 720px)
+        display: none;
+    &:hover
+      &:before
+        transform: translateX(0)
+
+.herologo 
+  background: url(../assets/img/logo.png)
+  background-size: contain
+  background-position: center
+  background-repeat: no-repeat
+  height: 150px
+  width: 150px
+  margin-right: 50px
+  @media (max-width: 720px)
+    display: none;
+
+
+.popup
+  z-index: 10000
+  width: 100%
+  height: 50px
+  position: fixed
+  bottom: 0
+  background-color: #000
+  color: #fff
+  text-align: center
+  center-flex(row)
+  transform: translateY(50px)
+  transition(all .2s cubic-bezier(cubic-value))
+  @media (max-width: 720px)
+    display: none
+  
+.popup-closed
+  transform: translateY(50px)
+
+.popup-close
+  cursor: pointer
+  font-size: 2rem
+  margin-left: 1rem
+
+.services
+  center-flex(column)
+  .services-title-lg
+    font-size: 32px
+    text-transform: uppercase
+    margin-bottom: 50px
+  .row
+    center-flex(row)
+    div:nth-child(last)
+      margin-right: 50px
+
+.products
+  center-flex(column)
+  margin-top: 50px
+  .products-title-lg
+    font-size: 32px
+    text-transform: uppercase
+    margin-bottom: 50px
+    @media (max-width: 720px)
+      font-size: 24px
+      margin-bottom: 20px
+  .row
+    center-flex(row)
+    padding: 5px
+    width: 95%
+    @media (max-width: 720px)
+      center-flex(column)
+    .column 
+      width: 20%
+      height: 180px
+      margin: 2px
+      background-position: center
+      background-size: 100%
+      background-repeat: no-repeat
+      @media (max-width: 720px)
+        width: 100%
+
+.cbz
+  background: url(../assets/products/cbz-achiever.png)
+
+.achiever
+  background: url(../assets/products/achiever-ignitor.png)
+
+.glamour
+  background: url(../assets/products/glamour.png)
+
+.splendor
+  background: url(../assets/products/splendor.png)
+
+.xtreme
+  background: url(../assets/products/xtreme-sports.png)
