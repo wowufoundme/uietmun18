@@ -39,7 +39,7 @@ body
   z-index 9998
   background #fff
   box-shadow 0 0 5px 1px #222
-  @media (max-width 720px)
+  @media (max-width 768px)
     //height 2rem
 
 .title 
@@ -47,7 +47,7 @@ body
   font-size: 28px
   font-weight 300
   text-align: center
-  @media (max-width: 720px)
+  @media (max-width: 768px)
     font-size: 16px;
   span 
     font-weight 700
@@ -72,13 +72,13 @@ body
   overflow: hidden
   border-top 1px solid #eee
   transition(all 1s cubic-bezier(cubic-value))
-  @media (max-width: 720px)
+  @media (max-width: 768px)
     height 100vh
 
 .main:before,
 .main:after
   transition(all 1s cubic-bezier(cubic-value))
-  @media (max-width: 720px)
+  @media (max-width: 768px)
     display: none;
 
 .cover--1
@@ -107,12 +107,12 @@ body
   
 .cover--1--removed
   right 100%
-  @media (max-width 720px)
+  @media (max-width 768px)
     display none
   
 .cover--2--removed
   left 100%
-  @media (max-width 720px)
+  @media (max-width 768px)
     display none
 
 // .main:hover:before
@@ -126,7 +126,7 @@ body
   width: 85%
   max-width: 960px
   margin: 0 auto
-  @media (max-width: 720px)
+  @media (max-width: 768px)
     color: lighten(main-color,95%)
 
 .intro 
@@ -138,7 +138,7 @@ body
   opacity 0
   transition(all 1s cubic-bezier(cubic-value))
   transition-delay 1s
-  @media (max-width: 720px)
+  @media (max-width: 768px)
     font-size: 28px
     line-height: 30px
     letter-spacing: 0
@@ -162,7 +162,7 @@ body
   padding: 20px 40px
   overflow: hidden
   transition(all .6s cubic-bezier(cubic-value))  
-  @media (max-width: 720px)
+  @media (max-width: 768px)
     padding: 5px 15px
     width: 150px
     background-color: #ffffff
@@ -183,7 +183,7 @@ body
   background-color: #fff
   transform: translateX(-100%)
   transition(all .5s cubic-bezier(cubic-value))
-  @media (max-width: 720px)
+  @media (max-width: 768px)
     display: none;
 
 .link:hover:before
@@ -193,7 +193,7 @@ body
   font-size: 12px
   letter-spacing: 4px
   text-transform: uppercase
-  @media (max-width: 720px)
+  @media (max-width: 768px)
     letter-spacing: 1px
 
 .masthead
@@ -209,7 +209,7 @@ body
   .masthead__date
     color #fff
     font-size 60px
-    @media (max-width 720px)
+    @media (max-width 768px)
       font-size 40px
 
 
@@ -226,7 +226,7 @@ body
   left 0
   right 0
   background deep-blue
-  @media (max-width 720px)
+  @media (max-width 768px)
     background linear-gradient(to top,rgba(0,0,0,.8),rgba(0,0,0,.8)), url('../assets/img/logo-full.png')
     background-size 100%
     background-position center
@@ -239,7 +239,7 @@ body
   center-flex(row)
   transform: translateY(-120%)
   transition(all 1s cubic-bezier(cubic-value)) 
-  @media (max-width: 720px)
+  @media (max-width: 768px)
     top 0
     bottom 0
     left 0
@@ -258,7 +258,7 @@ body
   top: 10px 
   left: 30px
   cursor pointer
-  @media (max-width: 720px)
+  @media (max-width: 768px)
     top 10px
     left 20px
   .toggle
@@ -335,7 +335,7 @@ body
       background-color #111
       transform: translateX(-105%)
       transition(all .2s cubic-bezier(cubic-value))
-      @media (max-width: 720px)
+      @media (max-width: 768px)
         display: none;
     &:hover
       color #ffff
@@ -355,7 +355,7 @@ body
   height: 150px
   width: 150px
   margin-right: 50px
-  @media (max-width: 720px)
+  @media (max-width: 768px)
     display: none;
 
 
@@ -371,7 +371,7 @@ body
   center-flex(row)
   transform: translateY(0)
   transition(all .2s cubic-bezier(cubic-value))
-  @media (max-width: 720px)
+  @media (max-width: 768px)
     display: none
   
 .popup-closed
@@ -396,18 +396,18 @@ body
       font-size 4.4em
       font-weight 300
       margin 0 0 40px 0
-      @media (max-width 720px)
+      @media (max-width 768px)
         font-size 2em
     img
       max-width 100%
-    @media (max-width: 720px)
+    @media (max-width: 768px)
       font-size: 24px
       margin-bottom: 20px
   .row
     center-flex(row)
     padding: 5px
     width: 95%
-    @media (max-width: 720px)
+    @media (max-width: 768px)
       center-flex(column)
     .column 
       width: 20%
@@ -416,7 +416,7 @@ body
       background-position: center
       background-size: 100%
       background-repeat: no-repeat
-      @media (max-width: 720px)
+      @media (max-width: 768px)
         width: 100%
         
 .agendas
@@ -424,7 +424,7 @@ body
   .card-container
     max-width 100%
     width 66.66666666%
-    @media (max-width 720px)
+    @media (max-width 768px)
       padding 0 20px
       width 100%
     .card
@@ -435,14 +435,14 @@ body
         font-family 'Playfair Display'
         font-size 40px
         line-height 1.2em
-        @media (max-width 720px)
+        @media (max-width 768px)
           font-size 32px
       .card-description
         font-size 18px
         margin-top 10px
         line-height 1.3333333em
         font-weight 300
-        @media (max-width 720px)
+        @media (max-width 768px)
           font-size 16px
       
 mark 
